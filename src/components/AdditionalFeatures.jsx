@@ -1,8 +1,8 @@
 import React from "react";
-import picture1 from "../assets/picture1.png";
-import picture2 from "../assets/picture2.png";
-import picture3 from "../assets/picture3.png";
-import picture4 from "../assets/picture4.png";
+import picture1 from "../assets/picture1.webp";
+import picture2 from "../assets/picture2.webp";
+import picture3 from "../assets/picture3.webp";
+import picture4 from "../assets/picture4.webp";
 
 const features = [
   {
@@ -37,25 +37,33 @@ const features = [
 
 const AdditionalFeatures = () => {
   return (
-    <div className="inline-grid grid-cols-1 md:grid-cols-2 gap-6 mx-auto my-6 items-center justify-center" style={{marginTop:"-2rem", padding:"2rem", backgroundColor: "#E8EBF0"}}>
+    <div
+      className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-6 mx-auto my-6 items-center justify-center"
+      style={{ marginTop: "-2rem", padding: "2rem", backgroundColor: "#E8EBF0" }}
+    >
       {features.map((feature, index) => (
-        <div key={index} className="bg-white p-3 rounded-lg shadow-lg" >
-          <div style={{ display: "flex", gap:"2rem" }}>
-            <div>
+        <div
+          key={index}
+          className="bg-white p-3 rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl"
+          style={{ cursor: "pointer" }}
+        >
+          <div className="flex flex-col md:flex-row gap-4">
+            <div className="w-full md:w-1/3">
               <img
                 src={feature.image}
-                style={{ width: "650px", height: "220px" }}
+                className="w-full h-auto object-cover rounded-lg"
+                alt={feature.title}
               />
             </div>
-        <div>
-            <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-            <p className="text-gray-600 mb-4">{feature.description}</p>
-            <a
-              href="#"
-              className="text-blue-500 hover:text-blue-700 font-medium"
-            >
-              {feature.linkText} →
-            </a>
+            <div className="w-full md:w-2/3">
+              <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
+              <p className="text-gray-600 mb-4">{feature.description}</p>
+              <a
+                href="#"
+                className="text-blue-500 hover:text-blue-700 font-medium"
+              >
+                {feature.linkText} →
+              </a>
             </div>
           </div>
         </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import chisel from "../assets/chisel.png";
+import chisel from "../assets/chisel.webp";
 
 const SchoolManagement = () => {
   return (

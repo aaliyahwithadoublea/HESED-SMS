@@ -1,5 +1,5 @@
 import React from "react";
-import pq from "../assets/pq.png";
+import pq from "../assets/pq.webp";
 
 const HesesdPQ = () => {
   return (

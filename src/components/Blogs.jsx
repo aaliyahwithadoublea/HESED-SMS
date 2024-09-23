@@ -1,11 +1,11 @@
 
 import React from 'react';
-import blog1 from '../assets/blog1.png';
-import blog2 from '../assets/blog2.png';
-import blog3 from '../assets/blog3.png';
-import blog4 from '../assets/blog4.png';
-import blog5 from '../assets/blog5.png';
-import blog6 from '../assets/blog6.png';
+import blog1 from '../assets/blog1.webp';
+import blog2 from '../assets/blog2.webp';
+import blog3 from '../assets/blog3.webp';
+import blog4 from '../assets/blog4.webp';
+import blog5 from '../assets/blog5.webp';
+import blog6 from '../assets/blog6.webp';
 
 
 const Blogs = () => {
@@ -55,9 +55,13 @@ const Blogs = () => {
         {blogs.map((blog, index) => (
           <div key={index} className="bg-white shadow-lg rounded-lg p-4">
             <img src={blog.image} alt={blog.title} className="w-full h-48 object-cover rounded-md mb-4" />
-            <p className="text-sm text-gray-500">{blog.type}</p>
+            <div style={{display:"flex", justifyContent:"space-between"}}>
+            <p className="text-sm text-gray-500" style={{color:"#3070B6", fontWeight:"bold"}}>{blog.type}</p>
+            <button style={{backgroundColor:"#D1D8E1", borderRadius:"5rem", padding:"0.3rem",width:"7rem"}}>{blog.date}</button>
+            </div>
+            <br/>
             <h3 className="text-xl font-semibold mb-2">{blog.title}</h3>
-            <p className="text-sm text-gray-400">{blog.date}</p>
+            
           </div>
         ))}
       </div>

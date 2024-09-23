@@ -1,5 +1,5 @@
 import React from 'react';
-import frame1 from '../assets/frame1.png'
+import frame1 from '../assets/frame1.webp'
 
 const ResultManagement = () => {
   return (

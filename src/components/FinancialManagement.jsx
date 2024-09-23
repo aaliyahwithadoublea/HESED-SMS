@@ -1,5 +1,5 @@
 import React from 'react';
-import frame3 from '../assets/frame3.png'
+import frame3 from '../assets/frame3.webp'
 const FinancialManagement = () => {
   return (
     <div className="bg-white p-8 rounded-lg shadow-lg mb-8 flex flex-col md:flex-row">

@@ -1,5 +1,5 @@
 import React from 'react';
-import frame2 from '../assets/frame2.png'
+import frame2 from '../assets/frame2.webp'
 const ComprehensiveStaff = () => {
   return (
     <div className="bg-white p-8 rounded-lg shadow-lg mb-8 flex flex-col md:flex-row">
