@@ -1,6 +1,6 @@
-import { useState } from 'react'
+import { useState } from 'react';
 import './App.css';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Import BrowserRouter as Router
 import Navbar from './components/Navbar/Navbar';
 import HeroSection from './components/HeroSection';
 import RatingSection from './components/RatingSection';
@@ -15,29 +15,51 @@ import Footer from './components/Footer';
 import Testimonials from './components/Testimonials';
 import End from './components/End';
 import SchoolManagement from './components/SchoolManagement';
+import AboutUs from './pages/AboutUs';
 
 function App() {
-
   return (
     <div>
-    <Navbar/>
-    <HeroSection />
-    <RatingSection />
-    <ResultManagement />
-      <FinancialManagement />
-      <ComprehensiveStaff />
-      <AdditionalFeatures />
-      <HesesdPQ />
-      <ChooseHESED />
-      <Testimonials />
-      <Blogs />
-      <SchoolManagement />
-      <Footer />
-      <End />
-   
+      <Router>
+        <Navbar /> {/* Navbar always appears */}
 
+        <Routes>
+          {/* Route for Home Page */}
+          <Route
+            path="/"
+            element={
+              <>
+                <HeroSection />
+                <RatingSection />
+                <ResultManagement />
+                <FinancialManagement />
+                <ComprehensiveStaff />
+                <AdditionalFeatures />
+                <HesesdPQ />
+                <ChooseHESED />
+                <Testimonials />
+                <Blogs />
+                <SchoolManagement />
+                <End />
+              </>
+            }
+          />
+
+          {/* Route for About Us Page (only Navbar, About Us content, and Footer) */}
+          <Route
+            path="/aboutus"
+            element={
+              <>
+                <AboutUs />
+              </>
+            }
+          />
+        </Routes>
+
+        <Footer /> {/* Footer always appears */}
+      </Router>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

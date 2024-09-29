@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import logo from '../../assets/HESED-LOGO.webp'
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
+import logo from '../../assets/HESED-LOGO.webp'; // Adjust the path to your logo
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,7 +17,6 @@ const Navbar = () => {
           <img src={logo} alt="HESED" className="h-14 w-auto" />
         </div>
 
-       
         <div className="md:hidden">
           <button onClick={toggleMenu} className="text-gray-700 focus:outline-none">
             <svg
@@ -36,18 +36,22 @@ const Navbar = () => {
           </button>
         </div>
 
-       
         <ul className="hidden md:flex space-x-6 text-sm">
-          <li className="text-blue-500">Home</li>
+          <li className="text-blue-500">
+            <Link to="/">Home</Link> {/* Link to Home */}
+          </li>
           <li className="text-gray-700">Solutions</li>
-          <li className="text-gray-700">About Us</li>
+          <li className="text-gray-700">
+            <Link to="/aboutus">About Us</Link> {/* Link to About Us */}
+          </li>
           <li className="text-gray-700">Blog</li>
         </ul>
 
-        
         <div className="hidden md:flex space-x-4">
           <button className="text-gray-700">Log In</button>
-          <button className=" text-white px-4 py-2 rounded-full" style={{backgroundColor: "#3070B6"}}>Book a Demo</button>
+          <button className="text-white px-4 py-2 rounded-full" style={{backgroundColor: "#3070B6"}}>
+            Book a Demo
+          </button>
         </div>
       </div>
 
@@ -55,14 +59,20 @@ const Navbar = () => {
       {isOpen && (
         <div className="md:hidden mt-4">
           <ul className="space-y-4">
-            <li className="text-blue-500">Home</li>
+            <li className="text-blue-500">
+              <Link to="/">Home</Link> {/* Mobile Link to Home */}
+            </li>
             <li className="text-gray-700">Solutions</li>
-            <li className="text-gray-700">About Us</li>
+            <li className="text-gray-700">
+              <Link to="/aboutus">About Us</Link> {/* Mobile Link to About Us */}
+            </li>
             <li className="text-gray-700">Blog</li>
           </ul>
           <div className="mt-4 space-y-2">
             <button className="text-gray-700 block w-full text-left">Log In</button>
-            <button className="bg-blue-500 text-white px-4 py-2 rounded-full block w-full text-center">Book a Demo</button>
+            <button className="bg-blue-500 text-white px-4 py-2 rounded-full block w-full text-center">
+              Book a Demo
+            </button>
           </div>
         </div>
       )}

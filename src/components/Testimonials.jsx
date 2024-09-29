@@ -91,6 +91,20 @@ const Testimonials = () => {
           reverseDirection: true,
           stopOnLastSlide: false,
         }}
+        breakpoints={{
+          640: {
+            slidesPerView: 1, // 1 slide on small screens
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 1, // 1 slide on medium screens like iPad, flex direction column
+            spaceBetween: 30,
+          },
+          1024: {
+            slidesPerView: 3, // 3 slides on large screens
+            spaceBetween: 40,
+          },
+        }}
         navigation={false}
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
@@ -125,6 +139,20 @@ const Testimonials = () => {
             delay: 1000,
             disableOnInteraction: false,
             stopOnLastSlide: false,
+          }}
+          breakpoints={{
+            640: {
+              slidesPerView: 1, // 1 slide on small screens
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 1, // 1 slide on medium screens like iPad, flex direction column
+              spaceBetween: 30,
+            },
+            1024: {
+              slidesPerView: 3, // 3 slides on large screens
+              spaceBetween: 40,
+            },
           }}
           navigation={false}
           modules={[Autoplay, Pagination, Navigation]}
@@ -165,6 +193,20 @@ const Testimonials = () => {
             disableOnInteraction: false,
             stopOnLastSlide: false,
             reverseDirection: true,
+          }}
+          breakpoints={{
+            640: {
+              slidesPerView: 1, // 1 slide on small screens
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 1, // 1 slide on medium screens like iPad, flex direction column
+              spaceBetween: 30,
+            },
+            1024: {
+              slidesPerView: 3, // 3 slides on large screens
+              spaceBetween: 40,
+            },
           }}
           navigation={false}
           modules={[Autoplay, Pagination, Navigation]}
