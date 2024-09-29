@@ -9,7 +9,7 @@ const Vision = () => {
         {/* Mission */}
         <div className="flex flex-col items-center text-center">
           <h2 className="text-2xl font-bold text-blue-600" style={{textAlign:"left"}}>Our Mission</h2>
-          <p className="mt-4 text-lg" style={{textAlign:"justify"}}>
+          <p className="mt-4 text-lg" style={{textAlign:"left"}}>
             We’re more than just an educational<pre /> technology company; we’re trailblazers <pre /> with a mission to transform school <pre />  administration! Our latest innovation <pre />  introduces a groundbreaking feature that <pre />  enhances student safety and supervision. <pre /> Prepare for a safer, more efficient, and<pre />  more connected educational<pre />  environment!
           </p>
         </div>
@@ -17,8 +17,8 @@ const Vision = () => {
 
         {/* Vision */}
         <div className="flex flex-col items-center text-center">
-          <h2 className="text-2xl font-bold text-yellow-500" style={{textAlign:"justify"}}>Our Vision</h2>
-          <p className="mt-4 text-lg" style={{textAlign:"justify"}}>
+          <h2 className="text-2xl font-bold text-yellow-500" style={{textAlign:"left"}}>Our Vision</h2>
+          <p className="mt-4 text-lg" style={{textAlign:"left"}}>
             At HESED, our vision is to cultivate a <pre />  collaborative community where students, <pre /> parents, and educators unite in a collective<pre />  pursuit of educational excellence.
           </p>
         </div>
