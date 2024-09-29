@@ -7,7 +7,7 @@ import Questions from '../components/Questions';
 
 const AboutUs = () => {
   return (
-    <div>
+    <div style={{overflow:"hidden"}}>
       <AboutUsHero />
       <Vision />
       <Team />
